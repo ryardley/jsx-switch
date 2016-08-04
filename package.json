@@ -1,0 +1,19 @@
+{
+  "name": "jsx-switch",
+  "version": "0.0.1",
+  "description": "Simple switching for React JSX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryardley/react-switch.git"
+  },
+  "author": "Rudi Yardley <contact@rudiyardley.com> (http://rudiyardley.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryardley/react-switch/issues"
+  },
+  "homepage": "https://github.com/ryardley/react-switch#readme"
+}
