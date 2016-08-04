@@ -2,7 +2,7 @@
 
 Simple switching for React JSX
 
-Found a bug? Got a feature request? [Submit an issue!](/issues)
+Found a bug? Got a feature request? [Submit an issue!](https://github.com/ryardley/jsx-switch/issues)
 
 # Usage
 
