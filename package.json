@@ -9,15 +9,15 @@
   "scripts": {
     "build": "gulp build",
     "test": "npm run build && npm run test-once",
-    "publish-patch": "npm run test-and-compile && npm version patch && git push --tags && npm publish",
-    "publish-minor": "npm run test-and-compile && npm version minor && git push --tags && npm publish",
-    "publish-major": "npm run test-and-compile && npm version major && git push --tags && npm publish",
+    "publish-patch": "npm run test && npm version patch && git push --tags && npm publish",
+    "publish-minor": "npm run test && npm version minor && git push --tags && npm publish",
+    "publish-major": "npm run test && npm version major && git push --tags && npm publish",
     "test-once": "mocha --compilers js:babel-register test --ignore **/fixtures",
     "test-watch": "mocha --watch --compilers js:babel-register test --ignore **/fixtures"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryardley/react-switch.git"
+    "url": "https://github.com/ryardley/react-switch.git"
   },
   "author": "Rudi Yardley <contact@rudiyardley.com> (http://rudiyardley.com)",
   "license": "MIT",
