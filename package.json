@@ -1,7 +1,7 @@
 {
   "name": "jsx-switch",
   "version": "0.0.2",
-  "description": "Simple switching for React JSX",
+  "description": "Simple switch statements for React JSX",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -9,22 +9,34 @@
   "scripts": {
     "build": "gulp build",
     "test": "npm run build && npm run test-once",
-    "publish-patch": "npm run test && npm version patch && git push --tags && npm publish",
-    "publish-minor": "npm run test && npm version minor && git push --tags && npm publish",
-    "publish-major": "npm run test && npm version major && git push --tags && npm publish",
+    "test-all": "rm -rf node_modules && npm i && npm run build && npm run test-once",
+    "publish-patch": "npm run test-all && npm version patch && git push --tags && npm publish",
+    "publish-minor": "npm run test-all && npm version minor && git push --tags && npm publish",
+    "publish-major": "npm run test-all && npm version major && git push --tags && npm publish",
     "test-once": "mocha --compilers js:babel-register test --ignore **/fixtures",
     "test-watch": "mocha --watch --compilers js:babel-register test --ignore **/fixtures"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryardley/react-switch.git"
+    "url": "https://github.com/ryardley/jsx-switch.git"
   },
+  "keywords": [
+    "switch",
+    "react",
+    "jsx",
+    "case",
+    "switch case",
+    "react case statement",
+    "case switching react",
+    "switch case for react",
+    "switch statements for react"
+  ],
   "author": "Rudi Yardley <contact@rudiyardley.com> (http://rudiyardley.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ryardley/react-switch/issues"
+    "url": "https://github.com/ryardley/jsx-switch/issues"
   },
-  "homepage": "https://github.com/ryardley/react-switch#readme",
+  "homepage": "https://github.com/ryardley/jsx-switch#readme",
   "devDependencies": {
     "babel-core": "^6.13.0",
     "babel-eslint": "^6.1.2",
@@ -45,10 +57,10 @@
     "gulp-babel": "^6.1.2",
     "gulp-watch": "^4.3.9",
     "html-to-text": "^2.1.3",
-    "mocha": "^3.0.1",
-    "react": "^15.3.0"
+    "mocha": "^3.0.1"
   },
   "dependencies": {
-    "react": "^15.3.0"
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
   }
 }

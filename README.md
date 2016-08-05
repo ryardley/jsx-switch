@@ -6,6 +6,14 @@ Simple switching for React JSX
 
 Found a bug? Got a feature request? [Submit an issue!](https://github.com/ryardley/jsx-switch/issues)
 
+# Installation
+
+Install locally.
+
+npm install jsx-switch --save
+
+Requires React 15.0.0 or later.
+
 # Usage
 
 ```jsx
