@@ -10,7 +10,9 @@ Found a bug? Got a feature request? [Submit an issue!](https://github.com/ryardl
 
 Install locally.
 
-npm install jsx-switch --save
+```bash
+$ npm install jsx-switch --save
+```
 
 Requires React 15.0.0 or later.
 
