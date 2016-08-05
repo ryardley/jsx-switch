@@ -2,9 +2,18 @@
   "name": "jsx-switch",
   "version": "0.0.1",
   "description": "Simple switching for React JSX",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "test": "npm run build && npm run test-once",
+    "publish-patch": "npm run test-and-compile && npm version patch && git push --tags && npm publish",
+    "publish-minor": "npm run test-and-compile && npm version minor && git push --tags && npm publish",
+    "publish-major": "npm run test-and-compile && npm version major && git push --tags && npm publish",
+    "test-once": "mocha --compilers js:babel-register test --ignore **/fixtures",
+    "test-watch": "mocha --watch --compilers js:babel-register test --ignore **/fixtures"
   },
   "repository": {
     "type": "git",
@@ -15,5 +24,31 @@
   "bugs": {
     "url": "https://github.com/ryardley/react-switch/issues"
   },
-  "homepage": "https://github.com/ryardley/react-switch#readme"
+  "homepage": "https://github.com/ryardley/react-switch#readme",
+  "devDependencies": {
+    "babel-core": "^6.13.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "^6.13.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "chai": "^3.5.0",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-mocha": "^4.3.0",
+    "eslint-plugin-react": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-watch": "^4.3.9",
+    "html-to-text": "^2.1.3",
+    "mocha": "^3.0.1",
+    "react": "^15.3.0"
+  },
+  "dependencies": {
+    "react": "^15.3.0"
+  }
 }
