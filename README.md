@@ -1,3 +1,5 @@
+<img src="https://travis-ci.org/ryardley/jsx-switch.svg?branch=master" />
+
 # jsx-switch
 
 Simple switching for React JSX
